@@ -1,14 +1,9 @@
 # homebrew-tap
 
-This is Clover Health's Homebrew Tap, which features formulas to help pin
-Postgres to 9.6 and Postgis to 2.5.
+This is a Homebrew Tap forked from Clover Health's one, to provide a postgis formula
+for postgres@11.
 
-Homebrew will pull in the latest version of formulas when they are upgraded,
-meaning that users can inadvertently be upgraded to Postgresql 10. The
-postgresql.rb formula here ensures that 9.6.10 is installed, and the postgis.rb
-formulate ensures that 2.5.2 is installed.
-
-## Installing Postgres 9.6 and Postgis 2.5
+## Installing Postgres@11 and Postgis 2.5
 
 First ensure you have upgraded to the latest homebrew:
 
@@ -29,7 +24,7 @@ brew services stop postgresql
 After this, install Clover's custom brew tap:
 
 ```sh
-brew tap cloverhealth/homebrew-tap
+brew tap thynson/homebrew-tap
 ```
 
 Then install the latest version of Postgres and unlink it. This is done first so that
@@ -46,29 +41,16 @@ The previous install of postgresql runs `initdb`, which creates database structu
 rm -rf /usr/local/var/postgres
 ```
 
-Now install Postgres from this tap with:
-
-```sh
-brew install cloverhealth/tap/postgresql  # yes, without the homebrew-
-```
-
-Now you will have both 9.6.10 and the latest version of Postgres installed.
-Switch to 9.6.10 with:
-
-```sh
-brew switch postgresql 9.6.10
-```
-
 Postgis 2.5 can be installed with:
 
 ```sh
-brew install cloverhealth/tap/postgis
+brew install postgis@2.5_postgres11
 ```
 
 Try running and accessing Postgres with the following:
 
 ```sh
-brew services start postgresql
+brew services start postgresql@11
 psql postgres  # It should show 9.6.10 as the version on the prompt
 ```
 
