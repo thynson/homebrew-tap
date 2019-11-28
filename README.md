@@ -51,7 +51,7 @@ Try running and accessing Postgres with the following:
 
 ```sh
 brew services start postgresql@11
-psql postgres  # It should show 9.6.10 as the version on the prompt
+psql postgres
 ```
 
 After running `psql postgres`, type the following in the prompt to verify your Postgis installation:
