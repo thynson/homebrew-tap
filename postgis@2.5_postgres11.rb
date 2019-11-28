@@ -167,3 +167,4 @@ class PostgisAT25Postgres11 < Formula
     assert_match /AddGeometryColumn/, result
   end
 end
+    
