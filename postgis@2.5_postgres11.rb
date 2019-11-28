@@ -3,7 +3,7 @@ class PostgisAT25Postgres11 < Formula
   homepage "https://postgis.net/"
   url "https://download.osgeo.org/postgis/source/postgis-2.5.3.tar.gz"
   sha256 "72e8269d40f981e22fb2b78d3ff292338e69a4f5166e481a77b015e1d34e559a"
-  revision 1
+  revision 2
 
   head do
     url "https://svn.osgeo.org/postgis/trunk/"
